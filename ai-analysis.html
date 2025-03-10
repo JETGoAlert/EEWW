@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI-Driven Earthquake Risk Analysis</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>AI Risk Prediction</h1>
+    <p>Enter location details to predict potential earthquake impact.</p>
+    <input type="text" id="location" placeholder="Enter location">
+    <button onclick="predictRisk()">Analyze Risk</button>
+    <p id="risk-output"></p>
+
+    <script>
+        function predictRisk() {
+            const location = document.getElementById("location").value;
+            if (location) {
+                document.getElementById("risk-output").innerText = 
+                `⚠️ AI Prediction: Moderate risk in ${location}. Stay prepared!`;
+            } else {
+                alert("Please enter a location!");
+            }
+        }
+    </script>
+</body>
+</html>
