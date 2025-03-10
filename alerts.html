@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Earthquake Alerts</title>
+</head>
+<body>
+    <h1>Earthquake Alerts</h1>
+    <button onclick="triggerAlert()">Test Alert</button>
+    <script>
+        function triggerAlert() {
+            alert("🚨 Earthquake Warning!");
+            const audio = new Audio("alert.mp3");
+            audio.play();
+            if (navigator.vibrate) {
+                navigator.vibrate([500, 200, 500]);
+            }
+        }
+    </script>
+</body>
+</html>
