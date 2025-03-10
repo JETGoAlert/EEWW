@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seismic Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Seismic Activity Data</h1>
+    <canvas id="quakeChart"></canvas>
+    <script>
+        fetch("https://earthquake.phivolcs.dost.gov.ph/api/v1/history")
+            .then(response => response.json())
+            .then(data => {
+                const labels = data.map(q => q.date);
+                const magnitudes = data.map(q => q.magnitude);
+                new Chart(document.getElementById("quakeChart"), {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [{ data: magnitudes, label: "Magnitude", borderColor: "#dc3545", fill: false }]
+                    }
+                });
+            });
+    </script>
+</body>
+</html>
