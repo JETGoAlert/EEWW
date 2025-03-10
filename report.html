@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Earthquake Reporting</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Report an Earthquake</h1>
+    <form id="reportForm">
+        <label for="magnitude">Estimated Magnitude:</label>
+        <input type="number" id="magnitude" required>
+        
+        <label for="location">Location:</label>
+        <input type="text" id="location" required>
+
+        <label for="damage">Describe Damage:</label>
+        <textarea id="damage"></textarea>
+
+        <button type="submit">Submit Report</button>
+    </form>
+
+    <h2>Past Reports</h2>
+    <div id="reports"></div>
+
+    <script>
+        document.getElementById("reportForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const mag = document.getElementById("magnitude").value;
+            const loc = document.getElementById("location").value;
+            const dmg = document.getElementById("damage").value;
+
+            const report = `<p>📌 <strong>Magnitude:</strong> ${mag} | <strong>Location:</strong> ${loc} | <strong>Damage:</strong> ${dmg}</p>`;
+            document.getElementById("reports").innerHTML += report;
+        });
+    </script>
+</body>
+</html>
