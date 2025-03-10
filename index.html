@@ -3,39 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JET GO ALERT - Earthquake Warning System</title>
+    <title>JET GO ALERT - Earthquake Early Warning</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>JET GO ALERT 🚨</h1>
-        <p>Real-Time Earthquake Early Warning System for Antipolo City National Science and Technology High School</p>
+        <h1>JET GO ALERT</h1>
+        <p>Real-time earthquake alerts & safety guidance for ACNSTHS</p>
     </header>
+    
+    <nav>
+        <ul>
+            <li><a href="alerts.html">Real-Time Alerts</a></li>
+            <li><a href="map.html">Evacuation Maps</a></li>
+            <li><a href="dashboard.html">Seismic Data</a></li>
+            <li><a href="resources.html">Safety Resources</a></li>
+            <li><a href="report.html">Community Reports</a></li>
+        </ul>
+    </nav>
 
     <main>
-        <section id="alert-section">
-            <button onclick="fetchEarthquakeData()">🔍 Check for Earthquake Alerts</button>
-            <div id="alert-box" class="alert hidden">
-                <h2>Earthquake Alert!</h2>
-                <p id="alert-message">No recent earthquake detected.</p>
-            </div>
-        </section>
-
-        <section id="evacuation-section">
-            <h2>🛑 Evacuation Instructions</h2>
-            <p id="evacuation-message">Follow the nearest exit route in case of strong shaking.</p>
-        </section>
-
-        <section id="preparedness-resources">
-            <h2>📝 Emergency Preparedness</h2>
-            <ul>
-                <li>Drop, Cover, and Hold during an earthquake.</li>
-                <li>Identify safe spots in each room.</li>
-                <li>Prepare an emergency kit with food, water, and first aid.</li>
-            </ul>
+        <section class="intro">
+            <h2>Stay Safe, Stay Alert</h2>
+            <p>JET GO ALERT provides early warnings and real-time seismic data to ensure the safety of students and staff.</p>
         </section>
     </main>
-
-    <script src="script.js"></script>
+    
+    <footer>
+        <p>&copy; 2025 JET GO ALERT | ACNSTHS</p>
+    </footer>
 </body>
 </html>
